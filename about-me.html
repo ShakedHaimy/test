@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <!--Custom CSS-->
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <style>
+            /* CSS for overlay effect */
+            .image-container {
+                position: relative;
+                display: inline-block;
+                margin: 0px;
+            }
+
+            .image-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(255, 64, 97, 0.7);
+                /* Pink overlay */
+                opacity: 0;
+                /* Initially hidden */
+                transition: opacity 0.3s ease-in-out;
+                border-radius: 0.4em;
+            }
+
+            .image-container:hover .image-overlay {
+                opacity: 1;
+                /* Show overlay on hover */
+            }
+
+            /* CSS for full-screen lightbox */
+            .lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Black background */
+                z-index: 1;
+                text-align: center;
+            }
+
+            .lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+</head>
+
+<body>
+    <header class="sticky-top my-menu">
+
+        <!-- Navigation -->
+        <div id="nav-placeholder"></div>
+
+    </header>
+
+
+    <div class="container-fluid px-0">
+
+        <section class="py-0 py-md-5 ">
+            <div class="container m-auto px-3 px-md-5">
+                <div class="row justify-content-center text-pro-on-dark py-5">
+                    <div class="col-md-6">
+
+                        <h1 class="h1-project py-2">About Me</h1>
+
+                        <p class="py-5">Aspiring UI/UX Designer with a passion for creating user-centric interfaces and
+                            a strong
+                            background in business management. Seeking opportunities to leverage my creativity,
+                            problem-solving skills, and technological expertise in a dynamic tech environment.</p>
+
+                        <h4 Class="h4-about pb-2 pt-5">Exploring the Journey from Coaching to Design</h4>
+
+
+
+                        <p Class="pt-5 pink-me">My Unique Path:</p>
+                        <!-- p images -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/national team.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay"
+                                        onclick="openLightbox('/images/about/national team.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">Head Coach of the Olympic Project.</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/bg team.JPG" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/bg team.JPG')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">Coaching the Israeli Catchball Champions</p>
+                            </div>
+                        </div>
+                        <!-- image end -->
+
+
+
+                        <p>My adventure began after my military service when I discovered my true calling as a coach. I
+                            immersed myself in volleyball and beach volleyball, guiding players in clubs and national
+                            teams. My coaching journey became a passion, an avenue to refine the skills of enthusiastic
+                            players and conquer new heights</p>
+
+                        <p Class="pt-5 pink-me">Empowering Others:</p">
+
+                            <!-- p images -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/tornament.JPG" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/tornament.JPG')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">A unique tournament with the community.</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/haifa team.JPG" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/haifa team.JPG')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">A happy team from the school in Haifa.</p>
+                            </div>
+                        </div>
+                        <!-- image end -->
+
+                        <p>But coaching went beyond the game; it was all about empowerment. I started beach volleyball
+                            schools in Tel Aviv and Haifa, where players came not just for play, but for the
+                            togetherness
+                            that sports bring. Seeing their sheer passion for the game was incredibly rewarding.</p>
+
+
+                        <p Class="pt-5 pink-me">The Intersection of Passions:</p">
+
+
+                            <!-- p images -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/Stat.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/Stat.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">A statistical program I made for scouting.</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/wix-fit.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/wix-fit.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">Planning, designing, and implementing Wix-Fit to manage
+                                    our customers.</p>
+                            </div>
+                        </div>
+                        <!-- image end -->
+
+                        <p>In parallel with my coaching pursuits, I maintained a deep connection to technology,
+                            particularly
+                            visual tools. Technology has been a valuable companion, enabling me to gain a competitive
+                            edge
+                            and streamline processes, both in the sports arena and in my design work.</p>
+
+
+                        <p Class="pt-5 pink-me">Creativity Beyond the Norm:</p">
+
+
+                            <!-- p images -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/pizza-oven.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/pizza-oven.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">I crafted a pizza oven to reach pizza perfection.</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/song.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/song.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">Me recording an original song.</p>
+                            </div>
+                        </div>
+                        <!-- image end -->
+
+                        <p>My creative spirit knows no boundaries. When I step away from the coaching court and
+                            technology,
+                            I indulge in hands-on projects involving iron, wood, and culinary experiments. Additionally,
+                            I
+                            harbor a love for songwriting and lyric creation. In my small kitchen, culinary innovations
+                            and
+                            new ideas come to life.</p>
+
+
+                        <p Class="pt-5 pink-me">Determination and Resilience:</p">
+
+
+
+
+                        <p>Resilience and determination are at my core, cultivated through years of competitive team
+                            sports.
+                            I thrive on challenges, and the word "give up" is not in my vocabulary. Each obstacle, in my
+                            view, presents an opportunity for growth.</p>
+
+
+                        <p Class="pt-5 pink-me">A Lifelong Learner:</p">
+
+
+
+
+                        <p>Learning is an unending journey for me. I embrace new experiences, diverse perspectives, and
+                            opportunities to broaden my horizons. Lifelong learning is not just a philosophy; it's a way
+                            of
+                            life.</p>
+
+                        <p Class="pt-5 pink-me">Personal Balance:</p">
+
+                            <!-- p images -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img class="img-fluid rounded-2" src="/images/about/my famile.jpg" alt="Image 1"
+                                        width="400" height="300">
+                                    <div class="image-overlay" onclick="openLightbox('/images/about/my famile.jpg')">
+                                    </div>
+                                </div>
+                                <p class="image-caption pt-2">My family - The princesses and I.</p>
+                            </div>
+                        </div>
+                        <!-- image end -->
+
+                        <p>Outside of my professional pursuits, I cherish my role as a family man. I have a loving wife
+                            and
+                            three wonderful daughters who bring balance, joy, and inspiration to my life.</p>
+
+                        <p class="pt-5">That's a glimpse into my world—a coach, a designer, a technophile, and a
+                            creative mind. I'm
+                            prepared to channel this diverse skill set and unwavering determination into every design
+                            endeavor. Let's create digital experiences that are not just user-centric but truly
+                            transformative.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Repeat for the remaining images (image3.jpg to image9.jpg) -->
+
+    <!-- footer section -->
+
+    <div id="footer-placeholder"></div>
+
+
+    <!-- end footer section -->
+
+    <!-- Add navigation code -->
+    <script src="nav.js"></script>
+    <script src="footer.js"></script>
+
+    <!-- Bootstrap code -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- Full-screen lightbox (hidden by default) -->
+    <div class="lightbox" id="image-lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="Image" id="lightbox-image">
+    </div>
+
+    <script>
+        // Open lightbox function
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById("image-lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
+
+            lightboxImage.src = imageSrc;
+            lightbox.style.display = "block";
+
+            // Add event listener for the "keydown" event
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // Close lightbox function
+        function closeLightbox() {
+            const lightbox = document.getElementById("image-lightbox");
+            lightbox.style.display = "none";
+
+            // Remove the "keydown" event listener
+            document.removeEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+            });
+        }
+    </script>
+</body>
